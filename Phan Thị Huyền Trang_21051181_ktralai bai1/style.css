@@ -1,0 +1,522 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    
+}
+
+header {
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between; /* Phân bố khoảng trống đều nhau */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000;
+}
+
+/* Thêm một đoạn này để tạo một phần tử giả */
+.topbar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000;
+}
+
+.search-box {
+    flex-grow: 1; /* Cho phép ô tìm kiếm mở rộng nhưng giữ ở giữa */
+    display: flex;
+    justify-content: center; /* Giữ ô tìm kiếm ở giữa */
+}
+
+.search-box input[type="text"] {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.social-icons {
+    margin-left: auto; /* Đẩy các biểu tượng ra cuối bên phải */
+    display: flex;
+    gap: 10px; /* Khoảng cách giữa các biểu tượng */
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+.main-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.main-menu ul li {
+    margin: 0 15px;
+}
+
+.main-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+}
+
+.main-menu ul li a:hover {
+    color: #007bff;
+}
+
+/* Thêm các phần phụ và phong cách khác tùy thuộc vào nhu cầu và sở thích cá nhân */
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden; /* Ẩn các phần không nằm trong khu vực nhìn thấy */
+}
+
+.banner-item {
+    flex: 1; /* Mỗi phần tử chiếm một phần bằng nhau của không gian */
+    position: relative;
+}
+
+.banner-item img {
+    width: 100%;
+    height: 400px; /* Tự động điều chỉnh chiều cao dựa trên chiều rộng */
+    display: block;
+}
+
+.banner-item p {
+    position: absolute;
+    top: 60%; /* Đưa văn bản xuống một chút so với giữa */
+    left: 50%; /* Giữa theo chiều ngang */
+    transform: translate(-50%, -50%); /* Căn giữa chính xác văn bản */
+    color: #333; /* Màu chữ */
+    font-size: 20px;
+    font-weight: bold;
+    width: 90%; /* Chiều rộng của khối văn bản */
+    text-align: center;
+    background: rgba(255, 255, 255, 0.5); /* Nền trắng mờ */
+    padding: 10px 20px; /* Thêm đệm xung quanh văn bản */
+    border-radius: 10px; /* Viền bo tròn */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Thêm bóng đổ cho khối văn bản */
+}
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.profile p {
+    margin: 0;
+}
+
+.content {
+    padding: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.section li {
+    margin-bottom: 5px;
+}
+
+.social {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social a {
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 20px;
+    color: #000;
+}
+/**/
+.container {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    background-color: #ffffff;
+}
+
+.about-img {
+    flex: 1; /* Cho ảnh và nội dung cùng chia sẻ không gian ngang nhau */
+    
+}
+
+.about-img img {
+    width: 100%;
+    height: auto; /* Đảm bảo ảnh không bị méo */
+    max-height: 600px; /* Giới hạn chiều cao tối đa là 300px */
+}
+
+.about-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.about-text p, .skills .skill-name {
+    margin: 10px 0;
+}
+
+.progress {
+    background-color: #ddd;
+    border-radius: 10px;
+    width: 100%;
+    height: 20px;
+}
+
+.progress-bar {
+    background-color: #4CAF50;
+    height: 100%;
+    width: 0%; /* Khởi tạo ban đầu không có chiều rộng */
+    border-radius: 10px;
+    transition: width 2s;
+}
+
+.skill-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: blue;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px; /* Thêm khoảng cách phía trên nút */
+}
+.about-img {
+    flex: 0 1 40%; /* ảnh chỉ chiếm 40% không gian, thay vì 50% */
+}
+
+.about-content {
+    flex: 0 1 60%; /* nội dung giờ đây chiếm 60% không gian */
+}
+/*kinh nghiệm*/
+.experience {
+    position: relative;
+    padding: 45px 0 15px 0;
+    background:#e5e4e4
+}
+
+.experience .timeline {
+    position: relative;
+    width: 100%;
+}
+
+.experience .timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: #2b97a9;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+    background:#4CAF50;
+}
+.section-header.text-center {
+    text-align: center;
+}
+
+.experience .timeline .timeline-item {
+    position: relative;
+    background: inherit;
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+.experience .timeline .timeline-item.left {
+    left: 0;
+    padding-right: 30px;
+}
+
+.experience .timeline .timeline-item.right {
+    left: 50%;
+    padding-left: 30px;
+}
+
+.experience .timeline .timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 48px;
+    right: -8px;
+    background: #ffffff;
+    border: 2px solid #2b97a9;
+    border-radius: 16px;
+    z-index: 1;
+}
+
+.experience .timeline .timeline-item.right::after {
+    left: -8px;
+}
+
+.experience .timeline .timeline-item::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 46px;
+  right: 10px;
+  z-index: 1;
+  border: 10px solid;
+  border-color: transparent transparent transparent #dddddd;
+}
+
+.experience .timeline .timeline-item.right::before {
+  left: 10px;
+  border-color: transparent #dddddd transparent transparent;
+}
+
+.experience .timeline .timeline-date {
+    position: absolute;
+    width: 100%;
+    top: 44px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2b97a9;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 1;
+}
+
+.experience .timeline .timeline-item.left .timeline-date {
+    text-align: left;
+    left: calc(100% + 55px);
+}
+
+.experience .timeline .timeline-item.right .timeline-date {
+    text-align: right;
+    right: calc(100% + 55px);
+}
+
+.experience .timeline .timeline-text {
+    padding: 10px;
+    background: #ffffff;
+    position: relative;
+    text-align: center;
+
+}
+.timeline-item { border: 2px solid #2b97a9; }
+.experience .timeline .timeline-item.right .timeline-text {
+text-align: center;
+
+}
+
+.experience .timeline .timeline-text h2 {
+    margin: 0 0 5px 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.experience .timeline .timeline-text h4 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.experience .timeline .timeline-text p {
+    margin: 0;
+    font-size: 16px;
+}
+
+@media (max-width: 767.98px) {
+    .experience .timeline::after {
+        left: 8px;
+    }
+
+    .experience .timeline .timeline-item {
+        width: 100%;
+        padding-left: 38px;
+    }
+    
+    .experience .timeline .timeline-item.left {
+        padding-right: 0;
+    }
+    
+    .experience .timeline .timeline-item.right {
+        left: 0%;
+        padding-left: 38px;
+    }
+
+    .experience .timeline .timeline-item.left::after, 
+    .experience .timeline .timeline-item.right::after {
+        left: 0;
+    }
+    
+    .experience .timeline .timeline-item.left::before,
+    .experience .timeline .timeline-item.right::before {
+        left: 18px;
+        border-color: transparent #dddddd transparent transparent;
+    }
+    
+    .experience .timeline .timeline-item.left .timeline-date,
+    .experience .timeline .timeline-item.right .timeline-date {
+        position: relative;
+        top: 0;
+        right: auto;
+        left: 0;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+    
+    .experience .timeline .timeline-item.left .timeline-text,
+    .experience .timeline .timeline-item.right .timeline-text {
+        border-right: none;
+        border-left: 5px solid #dddddd;
+    }
+}
+/*portfolio*/
+h2 {
+    text-align: center; /* Căn giữa nội dung của thẻ h2 */
+}
+.text-center {
+    text-align: center;
+}
+
+/* Portfolio Styles */
+.portfolio {
+    position: relative;
+    padding: 45px 0;
+}
+
+.portfolio #portfolio-filter {
+    padding: 0;
+    margin: -15px 0 25px;
+    list-style: none;
+    text-align: center;
+}
+
+.portfolio #portfolio-filter li {
+    display: inline-block;
+    margin: 5px;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #2b97a9;
+    border: 2px solid transparent;
+    border-radius: 0;
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+}
+
+.portfolio #portfolio-filter li:hover,
+.portfolio #portfolio-filter li.filter-active {
+    color: #2b97a9;
+    background-color: transparent;
+    border-color: #2b97a9;
+}
+
+.portfolio-item {
+    width: 33.3333%;
+    float: left;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.portfolio .portfolio-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio .portfolio-img img {
+    width: 100%;
+    max-height: 300px; /* Giới hạn chiều cao tối đa là 300px */
+    transition: transform 0.5s ease;
+}
+
+.portfolio .portfolio-item:hover .portfolio-img img {
+    transform: scale(1.1);
+}
+
+.portfolio .portfolio-text {
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    right: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding-left: 15px;
+}
+
+.portfolio .portfolio-text h3 {
+    flex-grow: 1;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.portfolio .portfolio-text a.btn {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+    text-decoration: none;
+    font-size: 45px;
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+/* Responsive Adjustment */
+@media (max-width: 768px) {
+    .portfolio-item {
+        width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-item {
+        width: 100%;
+    }
+}
+/* CSS để xích phần portfolio lên */
+
+/*footer*/
+
+
